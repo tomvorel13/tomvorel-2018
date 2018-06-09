@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import * as FontAwesome from 'react-icons/lib/fa'
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
@@ -16,18 +17,18 @@ const Header = ({ siteTitle }) => (
     <SocialIcons>
       <IconsWrapper>
         <Icon href="https://github.com/tomvorel13" target="_blank">
-          <i className="fab fa-github" />
+          <FontAwesome.FaGithub />
         </Icon>
 
         <Icon
           href="https://www.linkedin.com/in/tomas-vorel-3bb622a2"
           target="_blank"
         >
-          <i className="fab fa-linkedin-in" />
+          <FontAwesome.FaLinkedin />
         </Icon>
 
         <Icon href="https://twitter.com/tomasvorel13" target="_blank">
-          <i className="fab fa-twitter" />
+          <FontAwesome.FaTwitter />
         </Icon>
       </IconsWrapper>
     </SocialIcons>
@@ -46,8 +47,8 @@ const HeaderWrapper = styled.div`
 
 const Heading = styled.h1`
   font-size: 2em;
-  padding: 0.4em;
-  color: red;
+  padding: 0 0.5em;
+  margin-top: 1em;
 
   & > a {
     color: white;
@@ -56,6 +57,7 @@ const Heading = styled.h1`
 `
 const Menu = styled.div`
   width: 100%;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -65,7 +67,11 @@ const Menu = styled.div`
     text-decoration: none;
     padding: 5px;
     text-transform: uppercase;
-    background-color: black;
+    border-top: 1px solid #00171f;
+  }
+
+  & > a:first-of-type {
+    border: none;
   }
 `
 
@@ -81,8 +87,8 @@ const IconsWrapper = styled.div`
 `
 
 const Icon = styled.a`
-  font-size: 1.5em;
+  font-size: 25px;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
   margin: 0 10px 0.5em 10px;
 `
