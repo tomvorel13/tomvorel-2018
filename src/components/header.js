@@ -15,9 +15,20 @@ const Header = ({ siteTitle }) => (
     </Menu>
     <SocialIcons>
       <IconsWrapper>
-        <span>One</span>
-        <span>One</span>
-        <span>One</span>
+        <Icon href="https://github.com/tomvorel13" target="_blank">
+          <i className="fab fa-github" />
+        </Icon>
+
+        <Icon
+          href="https://www.linkedin.com/in/tomas-vorel-3bb622a2"
+          target="_blank"
+        >
+          <i className="fab fa-linkedin-in" />
+        </Icon>
+
+        <Icon href="https://twitter.com/tomasvorel13" target="_blank">
+          <i className="fab fa-twitter" />
+        </Icon>
       </IconsWrapper>
     </SocialIcons>
   </HeaderWrapper>
@@ -67,4 +78,11 @@ const SocialIcons = styled.div`
 `
 const IconsWrapper = styled.div`
   width: 100%;
+`
+
+const Icon = styled.a`
+  font-size: 1.5em;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 10px 0.5em 10px;
 `

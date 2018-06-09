@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const IndexPage = () => (
+const Skills = () => (
   <div>
-    <h1>Homepage</h1>
+    <h1>Skills page</h1>
   </div>
 )
 
-export default IndexPage
+export default Skills
