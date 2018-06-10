@@ -65,13 +65,64 @@ const Menu = styled.div`
   & > a {
     color: white;
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
     text-transform: uppercase;
     border-top: 1px solid #00171f;
+
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+
+  & > a:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(22, 21, 21);
+    background: linear-gradient(
+      90deg,
+      rgba(22, 21, 21, 1) 0%,
+      rgba(51, 51, 51, 0.4738095067128414) 100%
+    );
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
   }
 
   & > a:first-of-type {
     border: none;
+  }
+
+  & > a:hover,
+  & > a:focus,
+  & > a:active {
+    color: white;
+  }
+  & > a:hover:before,
+  & > a:focus:before,
+  & > a:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   }
 `
 
@@ -87,8 +138,13 @@ const IconsWrapper = styled.div`
 `
 
 const Icon = styled.a`
-  font-size: 25px;
+  font-size: 30px;
   display: inline-block;
   color: rgba(255, 255, 255, 0.5);
   margin: 0 10px 0.5em 10px;
+  transition: all .3s;
+
+  &:hover {
+    transform: scale(1.5);
+  }
 `
