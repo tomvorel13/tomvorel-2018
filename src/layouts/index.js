@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
 import styled from 'styled-components'
-import photo from './photo.jpeg'
+import photo from './b4.jpg'
 
 const Layout = ({ children, data }) => (
   <MainWrapper>
@@ -24,7 +24,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+    <ChildrenWrapper>{children()}</ChildrenWrapper>
     <BackgroundImage src={photo} alt="" />
   </MainWrapper>
 )
@@ -49,8 +49,17 @@ export const query = graphql`
 
 const MainWrapper = styled.div`
   display: flex;
-  height: 100vh;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4514180672268907) 100%
+  );
 `
 
 const BackgroundImage = styled.img`
@@ -60,4 +69,10 @@ const BackgroundImage = styled.img`
   width: 100%;
   z-index: -1;
   height: 100vh;
+  padding: 0;
+  margin: 0;
+`
+
+const ChildrenWrapper = styled.div`
+  width: 100%;
 `

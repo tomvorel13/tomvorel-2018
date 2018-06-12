@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const IndexPage = () => (
   <Wrapper>
     <Heading>Hi, I'm Tom.</Heading>
-    <p>I am a Frontend Developer from Brno, Czech Repulic.</p>
+    <IntroSentence>I am a Frontend Developer from Brno, Czech Repulic.</IntroSentence>
   </Wrapper>
 )
 
@@ -14,14 +14,16 @@ export default IndexPage
 // STYLES
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  margin: 15% 0 0 5%;
 `
 
 const Heading = styled.h1`
-  color: #00171f;
+  color: #00ffa1;
+  font-size: 5rem;
+  font-weight: 700;
 `
 
 const IntroSentence = styled.p`
-  color: #00171f;
+  color: #fff;
+  font-size: 2rem;
 `

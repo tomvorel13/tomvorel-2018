@@ -43,6 +43,7 @@ const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 0px 17px -2px rgba(0, 0, 0, 0.75);
 `
 
 const Heading = styled.h1`
@@ -51,7 +52,7 @@ const Heading = styled.h1`
   margin-top: 1em;
 
   & > a {
-    color: white;
+    color: #00ffa1;
     text-decoration: none;
   }
 `
@@ -89,12 +90,7 @@ const Menu = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(22, 21, 21);
-    background: linear-gradient(
-      90deg,
-      rgba(22, 21, 21, 1) 0%,
-      rgba(51, 51, 51, 0.4738095067128414) 100%
-    );
+    background: #00ffa1;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -114,7 +110,7 @@ const Menu = styled.div`
   & > a:hover,
   & > a:focus,
   & > a:active {
-    color: white;
+    color: black;
   }
   & > a:hover:before,
   & > a:focus:before,
@@ -140,9 +136,9 @@ const IconsWrapper = styled.div`
 const Icon = styled.a`
   font-size: 30px;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.5);
+  color: #00ffa1;
   margin: 0 10px 0.5em 10px;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     transform: scale(1.5);
