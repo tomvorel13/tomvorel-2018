@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const IndexPage = () => (
@@ -26,4 +25,5 @@ const Heading = styled.h1`
 const IntroSentence = styled.p`
   color: #fff;
   font-size: 2rem;
+  line-height: 1.2;
 `

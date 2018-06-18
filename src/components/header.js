@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import * as FontAwesome from 'react-icons/lib/fa'
 
+import { colors } from '../utilities'
+
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <Heading>
@@ -52,7 +54,7 @@ const Heading = styled.h1`
   margin-top: 1em;
 
   & > a {
-    color: #00ffa1;
+    color: ${colors.green};
     text-decoration: none;
   }
 `
@@ -64,7 +66,7 @@ const Menu = styled.div`
   text-align: left;
 
   & > a {
-    color: white;
+    color: ${colors.white};
     text-decoration: none;
     padding: 10px;
     text-transform: uppercase;
@@ -90,7 +92,7 @@ const Menu = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: #00ffa1;
+    background: ${colors.green};
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -110,7 +112,7 @@ const Menu = styled.div`
   & > a:hover,
   & > a:focus,
   & > a:active {
-    color: black;
+    color: ${colors.black};
   }
   & > a:hover:before,
   & > a:focus:before,
@@ -136,7 +138,7 @@ const IconsWrapper = styled.div`
 const Icon = styled.a`
   font-size: 30px;
   display: inline-block;
-  color: #00ffa1;
+  color: ${colors.green};
   margin: 0 10px 0.5em 10px;
   transition: all 0.3s;
 

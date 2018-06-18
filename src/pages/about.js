@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { colors } from '../utilities'
+
 const About = () => (
   <Wrapper>
     <Heading>ABOUT</Heading>
@@ -22,14 +24,14 @@ const Wrapper = styled.div`
 `
 
 const Heading = styled.h1`
-  color: #00ffa1;
+  color: ${colors.green};
   text-align: center;
   font-size: 5rem;
   font-weight: 400;
 `
 
 const Text = styled.p`
-  color: #fff;
+  color: ${colors.white};
   text-align: justify;
   font-size: 1.5rem;
   line-height: 1.2;
