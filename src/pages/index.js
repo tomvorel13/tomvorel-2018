@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { colors } from '../utilities'
+
 const IndexPage = () => (
   <Wrapper>
     <Heading>Hi, I'm Tom.</Heading>
-    <IntroSentence>I am a Frontend Developer from Brno, Czech Repulic.</IntroSentence>
+    <IntroSentence>
+      I am a Frontend Developer from Brno, Czech Repulic.
+    </IntroSentence>
   </Wrapper>
 )
 
@@ -17,13 +21,13 @@ const Wrapper = styled.div`
 `
 
 const Heading = styled.h1`
-  color: #00ffa1;
+  color: ${colors.green};
   font-size: 5rem;
   font-weight: 700;
 `
 
 const IntroSentence = styled.p`
-  color: #fff;
+  color: ${colors.white};
   font-size: 2rem;
   line-height: 1.2;
 `

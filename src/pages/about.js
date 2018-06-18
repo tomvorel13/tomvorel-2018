@@ -10,7 +10,7 @@ const About = () => (
     <Text>
       My name is Tom, I'm 25 years old and I live in Brno,Czech Republic. I am a
       passionate self-taught frontend developer with a tremendous love for
-      creating beautiful things with code. My primary focus is Javascript
+      creating beautiful things with code. My primary focus is JavaScript
       (working with React and Vue.js).
     </Text>
   </Wrapper>

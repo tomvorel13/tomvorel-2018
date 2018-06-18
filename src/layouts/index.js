@@ -48,6 +48,7 @@ export const query = graphql`
 // STYLES
 
 const MainWrapper = styled.div`
+  font-family: 'Roboto', sans-serif;
   display: flex;
   max-width: 100%;
   margin: 0;
