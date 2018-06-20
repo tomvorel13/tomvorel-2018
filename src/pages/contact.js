@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
+
+import { Wrapper, Heading, Text } from '../styles/pages'
 
 const Contact = () => (
-  <div>
-    <h1>Contact page</h1>
-  </div>
+  <Wrapper>
+    <Heading>Contact</Heading>
+  </Wrapper>
 )
 
 export default Contact

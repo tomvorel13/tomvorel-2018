@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import * as FontAwesome from 'react-icons/lib/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/lib/fa'
 
 import { colors } from '../utilities'
 
@@ -19,18 +19,18 @@ const Header = ({ siteTitle }) => (
     <SocialIcons>
       <IconsWrapper>
         <Icon href="https://github.com/tomvorel13" target="_blank">
-          <FontAwesome.FaGithub />
+          <FaGithub />
         </Icon>
 
         <Icon
           href="https://www.linkedin.com/in/tomas-vorel-3bb622a2"
           target="_blank"
         >
-          <FontAwesome.FaLinkedin />
+          <FaLinkedin />
         </Icon>
 
         <Icon href="https://twitter.com/tomasvorel13" target="_blank">
-          <FontAwesome.FaTwitter />
+          <FaTwitter />
         </Icon>
       </IconsWrapper>
     </SocialIcons>
@@ -69,7 +69,7 @@ const Menu = styled.div`
     color: ${colors.white};
     text-decoration: none;
     padding: 10px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     border-top: 1px solid #00171f;
 
     display: inline-block;

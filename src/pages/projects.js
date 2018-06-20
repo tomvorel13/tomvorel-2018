@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
+
+import { Wrapper, Heading, Text } from '../styles/pages'
 
 const Projects = () => (
-  <div>
-    <h1>Projects page</h1>
-  </div>
+  <Wrapper>
+    <Heading>Projects</Heading>
+  </Wrapper>
 )
 
 export default Projects
