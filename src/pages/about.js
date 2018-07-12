@@ -1,8 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
 
-import { colors } from '../utilities'
 import { Wrapper, Heading, Text } from '../styles/pages'
 
 const About = () => (
@@ -13,9 +10,11 @@ const About = () => (
       a passionate self-taught frontend developer with a tremendous love for
       creating beautiful things with code.
       <br />
-      <br /> My primary focus is JavaScript (working with mainly with React and
-      Vue.js in my free time) but as of right now, I work as full time as a Web
-      Designer/Frontend Coder at Monster Worldwide here in Brno.
+      <br /> My primary focus is JavaScript (working mainly with React and
+      Vue.js in my free time) but as of right now, I work full time as a Web
+      Designer/Frontend Coder at Monster Worldwide here in Brno, where I deal
+      with creating premium job ads and company brandings for customers from
+      Germany, Switzerland and Austria.
       <br />
       <br /> Apart from coding I love sports, music and educating myself about
       web development and life in general.

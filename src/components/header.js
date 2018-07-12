@@ -12,7 +12,6 @@ const Header = ({ siteTitle }) => (
     </Heading>
     <Menu>
       <Link to="/about">about me</Link>
-      <Link to="/skills">skills</Link>
       <Link to="/projects">projects</Link>
       <Link to="/contact">contact</Link>
     </Menu>
