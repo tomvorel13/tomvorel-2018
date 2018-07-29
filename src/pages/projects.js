@@ -1,11 +1,9 @@
 import React from 'react'
 
-import { Wrapper, Heading, Text } from '../styles/pages'
-
 const Projects = () => (
-  <Wrapper>
-    <Heading>Projects</Heading>
-  </Wrapper>
+  <div>
+    Projects
+  </div>
 )
 
 export default Projects
