@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
 import styled from 'styled-components'
+import { colors } from '../utilities'
+
 
 const Layout = ({ children, data }) => (
   <div>
@@ -23,7 +25,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+    <MainContent>{children()}</MainContent>
   </div>
 )
 
@@ -45,3 +47,7 @@ export const query = graphql`
 
 // STYLES
 
+const MainContent = styled.div`
+  background-color: ${colors.yellow};
+  font-family: 'Lato', sans-serif;
+`
