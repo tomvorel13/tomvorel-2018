@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import Footer from '../components/footer'
 import './index.css'
 import styled from 'styled-components'
 import { colors } from '../utilities'
@@ -26,6 +27,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <MainContent>{children()}</MainContent>
+    <Footer />
   </div>
 )
 
@@ -50,4 +52,5 @@ export const query = graphql`
 const MainContent = styled.div`
   background-color: ${colors.yellow};
   font-family: 'Lato', sans-serif;
+  /* height: 100vh; */
 `
