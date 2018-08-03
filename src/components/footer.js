@@ -45,12 +45,12 @@ const IconsWrapper = styled.div`
 
 const SocialIcon = styled.img`
   color: ${colors.black};
-  width: 40px;
+  width: 30px;
   margin-right: 20px;
 `
 
 const SocialIconLast = styled.img`
   color: ${colors.black};
-  width: 40px;
+  width: 30px;
   margin-right: 0;
 `
