@@ -11,15 +11,9 @@ const Header = ({ siteTitle }) => (
       <Logo src={Logo1} alt="" />
     </Link>
     <MenuItems>
-      <Link to="/about">
-        <MenuItem>about me</MenuItem>
-      </Link>
-      <Link to="/projects">
-        <MenuItem>projects</MenuItem>
-      </Link>
-      <Link to="/contact">
-        <MenuItem>contact</MenuItem>
-      </Link>
+      <MenuItem to="/about">about me</MenuItem>
+      <MenuItem to="/projects">projects</MenuItem>
+      <MenuItem to="/contact">contact</MenuItem>
     </MenuItems>
   </Navbar>
 )
@@ -35,32 +29,33 @@ const Navbar = styled.div`
   align-items: center;
   background-color: ${colors.yellow};
   display: flex;
-  height: 100px;
+  height: 10rem;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 0 7rem;
 `
 
 const MenuItems = styled.div`
   display: flex;
 `
 
-const MenuItem = styled.span`
-  border-bottom: 3px solid transparent;
+const MenuItem = styled(Link)`
+  border-bottom: 0.3rem solid transparent;
   display: inline-block;
   color: ${colors.black};
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  margin-left: 40px;
+  font-size: 2rem;
+  margin-left: 4rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    border-bottom: 3px solid ${colors.black};
+    border-bottom: 0.3rem solid ${colors.black};
     font-weight: 700;
     transform: scale(1.1);
   }
 
   &:active {
-    border-bottom: 3px solid ${colors.black};
+    border-bottom: 0.3rem solid ${colors.black};
   }
 `

@@ -10,7 +10,7 @@ import { colors } from '../utilities'
 
 
 const Layout = ({ children, data }) => (
-  <div>
+  <LayoutFontsize>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -28,7 +28,7 @@ const Layout = ({ children, data }) => (
     <Header siteTitle={data.site.siteMetadata.title} />
     <MainContent>{children()}</MainContent>
     <Footer />
-  </div>
+  </LayoutFontsize>
 )
 
 Layout.propTypes = {
@@ -49,8 +49,12 @@ export const query = graphql`
 
 // STYLES
 
+const LayoutFontsize = styled.div`
+  font-size: 62.5%;
+`
+
 const MainContent = styled.div`
   background-color: ${colors.yellow};
   font-family: 'Lato', sans-serif;
-  /* height: 100vh; */
+  height: 100vh;
 `

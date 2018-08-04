@@ -41,6 +41,7 @@ const IconsWrapper = styled.div`
   display: flex;
   grid-column: 2 / span 1;
   justify-content: center;
+  align-items: center;
 `
 
 const SocialIcon = styled.img`

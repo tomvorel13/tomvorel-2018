@@ -35,6 +35,7 @@ const HeroText = styled.span`
   font-family: 'Oswald', sans-serif;
   font-size: 120px;
   font-weight: 700;
+  letter-spacing: 10px;
   margin: auto;
   max-width: 70%;
   padding: 10% 8%;

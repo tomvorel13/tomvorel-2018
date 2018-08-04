@@ -3,7 +3,6 @@ import { colors } from '../utilities'
 
 const MainWrapper = styled.div`
   display: grid;
-  height: 80vh;
   grid-template-columns: 2fr 3fr 2fr;
 `
 
