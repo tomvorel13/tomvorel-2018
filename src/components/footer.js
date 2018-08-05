@@ -33,7 +33,7 @@ export default Footer
 
 const FooterWrap = styled.div`
   display: grid;
-  grid-template-columns: auto 40% auto;
+  grid-template-columns: 2fr 3fr 2fr;
   background-color: ${colors.yellow};
 `
 
@@ -41,17 +41,16 @@ const IconsWrapper = styled.div`
   display: flex;
   grid-column: 2 / span 1;
   justify-content: center;
+  padding: 2rem 0;
   align-items: center;
 `
 
 const SocialIcon = styled.img`
   color: ${colors.black};
-  width: 30px;
-  margin-right: 20px;
+  width: 2.5rem;
+  margin-right: 2rem;
 `
 
-const SocialIconLast = styled.img`
-  color: ${colors.black};
-  width: 30px;
+const SocialIconLast = SocialIcon.extend`
   margin-right: 0;
 `

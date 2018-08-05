@@ -37,15 +37,15 @@ export default Projects
 // STYLES
 
 const ProjectsHeading = SectionHeading.extend`
-  max-width: 150px;
+  max-width: 15rem;
 `
 
 const SecondaryHeading = styled.h3`
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 `
 
 const TextWithMb = Text.extend`
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 `

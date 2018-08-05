@@ -33,19 +33,19 @@ const HeroText = styled.span`
   color: ${colors.yellow};
   display: block;
   font-family: 'Oswald', sans-serif;
-  font-size: 120px;
+  font-size: 10rem;
   font-weight: 700;
-  letter-spacing: 10px;
-  margin: auto;
+  letter-spacing: 1rem;
+  margin: 1rem auto 0 auto;
   max-width: 70%;
-  padding: 10% 8%;
+  padding: 2rem 1rem;
   text-align: center;
 `
 
 const IntroSentence = styled.p`
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 600;
-  margin: 60px 0 100px 0;
+  margin: 6rem 0 10rem 0;
   text-align: center;
 `
 
@@ -53,16 +53,16 @@ const Button = styled.button`
   align-items: center;
   color: ${colors.black};
   background-color: ${colors.yellow};
-  border: 5px solid ${colors.black};
+  border: 0.3rem solid ${colors.black};
   display: flex;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 600;
   justify-content: space-between;
-  margin: 0 auto 150px auto;
+  margin: 0 auto 13rem auto;
   padding: 2%;
   text-decoration: none;
   text-transform: uppercase;
-  width: 250px;
+  width: 20rem;
 
   &:hover {
     cursor: pointer;
@@ -71,6 +71,7 @@ const Button = styled.button`
 
 const Caret = styled.img`
   margin-bottom: 0;
+  width: 12%;
 `
 
 const StyledLink = styled(Link)`

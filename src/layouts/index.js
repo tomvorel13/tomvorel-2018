@@ -8,9 +8,8 @@ import './index.css'
 import styled from 'styled-components'
 import { colors } from '../utilities'
 
-
 const Layout = ({ children, data }) => (
-  <LayoutFontsize>
+  <LayoutWrapper>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -25,10 +24,12 @@ const Layout = ({ children, data }) => (
         },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <MainContent>{children()}</MainContent>
-    <Footer />
-  </LayoutFontsize>
+    <FlexWrap>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <MainContent>{children()}</MainContent>
+      <Footer />
+    </FlexWrap>
+  </LayoutWrapper>
 )
 
 Layout.propTypes = {
@@ -49,12 +50,20 @@ export const query = graphql`
 
 // STYLES
 
-const LayoutFontsize = styled.div`
+const FlexWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+`
+
+const LayoutWrapper = styled.div`
   font-size: 62.5%;
 `
 
 const MainContent = styled.div`
+  /* flex: 1; */
   background-color: ${colors.yellow};
   font-family: 'Lato', sans-serif;
-  height: 100vh;
+  height: 100%;
 `

@@ -21,7 +21,7 @@ export default Contact
 // STYLES
 
 const ContactHeading = SectionHeading.extend`
-  max-width: 150px;
+  max-width: 15rem;
 `
 
 const ContactText = Text.extend`

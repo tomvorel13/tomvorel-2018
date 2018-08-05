@@ -23,6 +23,10 @@ export default Header
 // STYLES
 const Logo = styled.img`
   margin-bottom: 0;
+
+  @media screen and (max-width: 136.6rem) {
+    width: 80%;
+  }
 `
 
 const Navbar = styled.div`
@@ -57,5 +61,13 @@ const MenuItem = styled(Link)`
 
   &:active {
     border-bottom: 0.3rem solid ${colors.black};
+  }
+
+  @media screen and (max-width: 136.6rem) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
   }
 `
