@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Modal from '../components/modal'
 import './index.css'
 import styled from 'styled-components'
 import { colors } from '../utilities'
@@ -25,6 +26,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <FlexWrap>
+      <Modal />
       <Header siteTitle={data.site.siteMetadata.title} />
       <MainContent>{children()}</MainContent>
       <Footer />

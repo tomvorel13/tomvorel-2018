@@ -40,6 +40,11 @@ const HeroText = styled.span`
   max-width: 70%;
   padding: 2rem 1rem;
   text-align: center;
+
+  @media screen and (max-width: 37.5rem) {
+    font-size: 5rem;
+    margin: 3rem auto 0 auto;
+  }
 `
 
 const IntroSentence = styled.p`
@@ -47,6 +52,11 @@ const IntroSentence = styled.p`
   font-weight: 600;
   margin: 6rem 0 10rem 0;
   text-align: center;
+
+  @media screen and (max-width: 37.5rem) {
+    margin: 6rem 0 8rem 0;
+    font-size: 1.8rem;
+  }
 `
 
 const Button = styled.button`

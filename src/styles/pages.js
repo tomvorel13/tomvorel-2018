@@ -8,6 +8,10 @@ const MainWrapper = styled.div`
   @media screen and (max-width: 76.8rem) {
     grid-template-columns: auto 80% auto;
   }
+
+  @media screen and (max-width: 37.5rem) {
+    grid-template-columns: auto 90% auto;
+  }
 `
 
 const ContentColumn = styled.div`
@@ -33,6 +37,7 @@ const SectionHeading = styled.h2`
 
   @media (max-width: 37.5rem) {
     font-size: 2.5rem;
+    margin: 3rem auto 6rem auto;
     padding: 0.5rem 1rem;
   }
 `

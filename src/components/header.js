@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import { colors } from '../utilities'
 import Logo1 from '../assets/Logo1.svg'
+import Burger from '../assets/burger.svg'
 
-const Header = ({ siteTitle }) => (
-  <Navbar>
-    <Link to="/">
-      <Logo src={Logo1} alt="" />
-    </Link>
-    <MenuItems>
-      <MenuItem to="/about">about me</MenuItem>
-      <MenuItem to="/projects">projects</MenuItem>
-      <MenuItem to="/contact">contact</MenuItem>
-    </MenuItems>
-  </Navbar>
-)
+class Header extends Component {
+  state = {
+    showMenu: false
+  }
+
+  clickHandler = () => {
+    console.log('Hi');
+  }
+
+  render() {
+    return (
+      <Navbar>
+        <Link to="/">
+          <Logo src={Logo1} alt="" />
+        </Link>
+        <BurgerIcon onClick={this.clickHandler} src={Burger} alt="" />
+        <MenuItems>
+          <MenuItem to="/about">about me</MenuItem>
+          <MenuItem to="/projects">projects</MenuItem>
+          <MenuItem to="/contact">contact</MenuItem>
+        </MenuItems>
+      </Navbar>
+    )
+  }
+}
 
 export default Header
 
@@ -29,6 +43,14 @@ const Logo = styled.img`
   }
 `
 
+const BurgerIcon = styled.img`
+  margin-bottom: 0;
+
+  @media screen and (min-width: 37.5rem) {
+    display: none;
+  }
+`
+
 const Navbar = styled.div`
   align-items: center;
   background-color: ${colors.yellow};
@@ -36,10 +58,18 @@ const Navbar = styled.div`
   height: 10rem;
   justify-content: space-between;
   padding: 0 7rem;
+
+  @media screen and (max-width: 37.5rem) {
+    padding: 0 1rem;
+  }
 `
 
 const MenuItems = styled.div`
   display: flex;
+
+  @media screen and (max-width: 37.5rem) {
+    display: none;
+  }
 `
 
 const MenuItem = styled(Link)`
@@ -50,6 +80,7 @@ const MenuItem = styled(Link)`
   font-weight: 600;
   font-size: 2rem;
   margin-left: 4rem;
+  padding-bottom: 0.3rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 
@@ -67,7 +98,7 @@ const MenuItem = styled(Link)`
     font-size: 1.5rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 76.8rem) {
     font-size: 2rem;
   }
 `

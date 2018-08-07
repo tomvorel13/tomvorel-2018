@@ -49,6 +49,11 @@ const SocialIcon = styled.img`
   color: ${colors.black};
   width: 2.5rem;
   margin-right: 2rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const SocialIconLast = SocialIcon.extend`
