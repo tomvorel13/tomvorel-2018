@@ -16,8 +16,8 @@ const About = () => (
         premium customers such are Huawei, Spotify, FedEx and many others.{' '}
         <br />
         <br /> In my job I mostly work with HTML and CSS (including the newest
-        features such are flexbox, CSS Animations and hopefully we can start
-        implementing CSS Grid in the near future) and in my free time I’m
+        features such as flexbox, CSS Animations and hopefully we can start
+        implementing CSS Grid in the near future). When it comes to my free time I’m
         spending most of it working on my Javascript skills and developing
         single page applications using mostly React, although I also have
         experience with Angular 2+ and Vue.js. <br />

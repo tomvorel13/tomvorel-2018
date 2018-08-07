@@ -5,26 +5,53 @@ import styled from 'styled-components'
 import { colors } from '../utilities'
 import Cross from '../assets/cross.svg'
 
-const Modal = ({ siteTitle }) => (
-    <ModalWrapper>
-        <p>Hi there!</p>
-        <CrossIcon src={Cross} />
-    </ModalWrapper>
+const Modal = ({ siteTitle, ...props }) => (
+  <ModalWrapper>
+    <CrossIcon src={Cross} onClick={props.clicked} />
+    <MenuLink onClick={props.clicked} to="/">
+      HOME
+    </MenuLink>
+    <MenuLink onClick={props.clicked} to="/about">
+      ABOUT
+    </MenuLink>
+    <MenuLink onClick={props.clicked} to="/projects">
+      PROJECTS
+    </MenuLink>
+    <MenuLink onClick={props.clicked} to="/contact">
+      CONTACT
+    </MenuLink>
+  </ModalWrapper>
 )
 
-export default Modal;
+export default Modal
 
 // STYLES
 
-const ModalWrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.95);
-    position: absolute;
+const CrossIcon = styled.img`
+  position: absolute;
+  right: 0;
+  top: 0;
 `
 
-const CrossIcon = styled.img`
-    position: absolute;
-    top: 0;
-    right: 0;
+const ModalWrapper = styled.div`
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+`
+
+const MenuLink = styled(Link)`
+  color: ${colors.black};
+  background-color: ${colors.yellow};
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+  padding: 2rem 0;
+  margin-bottom: .3rem;
+  text-align: center;
+  text-decoration: none;
+  max-width: 100%;
 `

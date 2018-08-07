@@ -2,32 +2,40 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import Modal from '../components/modal'
+
 import { colors } from '../utilities'
 import Logo1 from '../assets/Logo1.svg'
 import Burger from '../assets/burger.svg'
 
 class Header extends Component {
   state = {
-    showMenu: false
+    showMenu: false,
   }
 
-  clickHandler = () => {
-    console.log('Hi');
+  toggleModal = () => {
+    this.setState({
+      showMenu: !this.state.showMenu,
+    })
+    console.log('Hi!');
   }
 
   render() {
     return (
-      <Navbar>
-        <Link to="/">
-          <Logo src={Logo1} alt="" />
-        </Link>
-        <BurgerIcon onClick={this.clickHandler} src={Burger} alt="" />
-        <MenuItems>
-          <MenuItem to="/about">about me</MenuItem>
-          <MenuItem to="/projects">projects</MenuItem>
-          <MenuItem to="/contact">contact</MenuItem>
-        </MenuItems>
-      </Navbar>
+      <div>
+        {this.state.showMenu ? <Modal clicked={this.toggleModal} /> : null}
+        <Navbar>
+          <Link to="/">
+            <Logo src={Logo1} alt="" />
+          </Link>
+          <BurgerIcon onClick={this.toggleModal} src={Burger} alt="" />
+          <MenuItems>
+            <MenuItem to="/about">about me</MenuItem>
+            <MenuItem to="/projects">projects</MenuItem>
+            <MenuItem to="/contact">contact</MenuItem>
+          </MenuItems>
+        </Navbar>
+      </div>
     )
   }
 }
