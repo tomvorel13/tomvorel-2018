@@ -42,6 +42,7 @@ const ModalWrapper = styled.div`
   padding-top: 15rem;
   position: absolute;
   width: 100%;
+  z-index: 300;
 `
 
 const MenuLink = styled(Link)`
