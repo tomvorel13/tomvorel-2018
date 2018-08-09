@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+
+import favicon from '../assets/favicon.png'
 import './index.css'
 import styled from 'styled-components'
 import { colors } from '../utilities'
@@ -23,6 +25,7 @@ const Layout = ({ children, data }) => (
             'tom vorel, web developer, portfolio, 2018, personal website',
         },
       ]}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     <FlexWrap>
       <Header siteTitle={data.site.siteMetadata.title} />
