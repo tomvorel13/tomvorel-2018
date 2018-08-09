@@ -59,6 +59,20 @@ const IntroSentence = styled.p`
   }
 `
 
+const Caret = styled.img`
+  margin-bottom: 0;
+  width: 12%;
+
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+`
+
 const Button = styled.button`
   align-items: center;
   color: ${colors.black};
@@ -74,18 +88,26 @@ const Button = styled.button`
   text-transform: uppercase;
   width: 20rem;
 
+  //Animation
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+
   &:hover {
     cursor: pointer;
+  }
+
+  &:hover ${Caret}, &:focus ${Caret}, &:active ${Caret} {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
   }
 
   @media screen and (max-width: 37.5rem) {
     padding: 4%;
   }
-`
-
-const Caret = styled.img`
-  margin-bottom: 0;
-  width: 12%;
 `
 
 const StyledLink = styled(Link)`
