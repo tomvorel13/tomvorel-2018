@@ -37,8 +37,9 @@ const ModalWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.95);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  /* justify-content: center; */
+  height: 110%;
+  padding-top: 15rem;
   position: absolute;
   width: 100%;
 `

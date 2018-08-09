@@ -77,6 +77,10 @@ const Button = styled.button`
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 37.5rem) {
+    padding: 4%;
+  }
 `
 
 const Caret = styled.img`
