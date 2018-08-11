@@ -19,8 +19,8 @@ const MainWrapper = styled.div`
   grid-template-columns: 2fr 3fr 2fr;
 
   /* PAGE TRANSITION ANIMATION */
-  -webkit-animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 
   @media screen and (max-width: 76.8rem) {
     grid-template-columns: auto 80% auto;
