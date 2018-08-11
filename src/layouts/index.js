@@ -55,9 +55,8 @@ export const query = graphql`
 
 const FlexWrap = styled.div`
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
 `
 
 const LayoutWrapper = styled.div`
@@ -65,8 +64,7 @@ const LayoutWrapper = styled.div`
 `
 
 const MainContent = styled.div`
-  /* flex: 1; */
+  flex: 1;
   background-color: ${colors.yellow};
   font-family: 'Lato', sans-serif;
-  height: 100%;
 `

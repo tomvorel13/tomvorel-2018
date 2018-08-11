@@ -2,15 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { colors } from '../utilities'
-import { MainWrapper, ContentColumn, SectionHeading, Text } from '../styles/pages'
+import {
+  MainWrapper,
+  ContentColumn,
+  SectionHeading,
+  Text,
+} from '../styles/pages'
 
 const Contact = () => (
   <MainWrapper>
     <ContentColumn>
       <ContactHeading>Contact</ContactHeading>
       <ContactText>
-        Feel free to get in touch with me via email tomvorel13@gmail.com or
-        reach out via Twitter.
+        Feel free to get in touch with me via email{' '}
+        <EmailLink href="mailto:tomvorel13@gmail.com">
+          tomvorel13@gmail.com
+        </EmailLink> or reach out via one of the below listed social platforms.
       </ContactText>
     </ContentColumn>
   </MainWrapper>
@@ -26,4 +33,9 @@ const ContactHeading = SectionHeading.extend`
 
 const ContactText = Text.extend`
   text-align: center;
+`
+const EmailLink = styled.a`
+  color: ${colors.black};
+  text-decoration: none;
+  font-weight: 600; 
 `

@@ -82,7 +82,7 @@ const Button = styled.button`
   font-size: 2rem;
   font-weight: 600;
   justify-content: space-between;
-  margin: 0 auto 13rem auto;
+  margin: 0 auto 12rem auto;
   padding: 2%;
   text-decoration: none;
   text-transform: uppercase;

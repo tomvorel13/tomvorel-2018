@@ -1,9 +1,26 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { colors } from '../utilities'
+
+const Animation = keyframes`
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+`
 
 const MainWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
+
+  /* PAGE TRANSITION ANIMATION */
+  -webkit-animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media screen and (max-width: 76.8rem) {
     grid-template-columns: auto 80% auto;
@@ -46,7 +63,6 @@ const Text = styled.p`
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
-  font-weight: 600;
   margin-bottom: 10rem;
 
   @media screen and (max-width: 76.8rem) {

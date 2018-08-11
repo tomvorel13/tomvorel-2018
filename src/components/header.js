@@ -109,7 +109,7 @@ const MenuItem = styled(Link)`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    border-bottom: 0.3rem solid ${colors.black};
+    border-bottom: 0.2rem solid ${colors.black};
     font-weight: 700;
     transform: scale(1.1);
   }
