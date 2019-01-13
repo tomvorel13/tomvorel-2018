@@ -52,7 +52,6 @@ export const query = graphql`
 `
 
 // STYLES
-
 const FlexWrap = styled.div`
   display: flex;
   min-height: 100vh;

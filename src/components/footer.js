@@ -10,16 +10,28 @@ import Twitter from '../assets/Twitter.svg'
 const Footer = ({ siteTitle }) => (
   <FooterWrap>
     <IconsWrapper>
-      <a href="https://twitter.com/tomasvorel13" target="_blank">
+      <a
+        href="https://twitter.com/tomasvorel13"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <SocialIcon src={Twitter} />
       </a>
-      <a href="https://github.com/tomvorel13" target="_blank">
+      <a
+        href="https://github.com/tomvorel13"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <SocialIcon src={Github} />
       </a>
       <a href="mailto:tomvorel13@gmail.com">
         <SocialIcon src={Google} />
       </a>
-      <a href="https://www.linkedin.com/in/tomvorel" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/tomvorel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <SocialIconLast src={Linkedin} />
       </a>
     </IconsWrapper>
@@ -29,7 +41,6 @@ const Footer = ({ siteTitle }) => (
 export default Footer
 
 // STYLES
-
 const FooterWrap = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
