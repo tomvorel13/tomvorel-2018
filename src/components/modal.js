@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
 import { colors } from '../utilities'
@@ -52,7 +52,7 @@ const MenuLink = styled(Link)`
   font-family: 'Lato', sans-serif;
   font-size: 3rem;
   padding: 2rem 0;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   text-align: center;
   text-decoration: none;
   max-width: 100%;

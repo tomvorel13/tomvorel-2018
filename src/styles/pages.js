@@ -1,7 +1,8 @@
-import styled, { keyframes } from '@emotion/styled'
+import { keyframes } from '@emotion/core'
+import styled from '@emotion/styled'
 import { colors } from '../utilities'
 
-const Animation = keyframes`
+export const Animation = keyframes`
   0% {
     -webkit-transform: translateZ(-1400px);
             transform: translateZ(-1400px);
@@ -14,12 +15,13 @@ const Animation = keyframes`
   }
 `
 
-const MainWrapper = styled.div`
+export const MainWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
 
   /* PAGE TRANSITION ANIMATION */
-  -webkit-animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  -webkit-animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
   animation: ${Animation} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 
   @media screen and (max-width: 76.8rem) {
@@ -31,11 +33,11 @@ const MainWrapper = styled.div`
   }
 `
 
-const ContentColumn = styled.div`
+export const ContentColumn = styled.div`
   grid-column: 2 / span 1;
 `
 
-const SectionHeading = styled.h2`
+export const SectionHeading = styled.h2`
   background-color: ${colors.black};
   color: ${colors.yellow};
   display: block;
@@ -59,7 +61,7 @@ const SectionHeading = styled.h2`
   }
 `
 
-const Text = styled.p`
+export const Text = styled.p`
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
@@ -73,10 +75,3 @@ const Text = styled.p`
     font-size: 1.5rem;
   }
 `
-
-export default {
-  MainWrapper,
-  ContentColumn,
-  SectionHeading,
-  Text,
-}

@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
 
 import favicon from '../assets/favicon.png'
-import './index.css'
+import '../layouts/index.css'
 import styled from '@emotion/styled'
 import { colors } from '../utilities'
 
 const Layout = ({ children, data, history, location, match }) => (
   <LayoutWrapper>
     <Helmet
-      title={data.site.siteMetadata.title}
       meta={[
         {
           name: 'description',
@@ -28,7 +28,7 @@ const Layout = ({ children, data, history, location, match }) => (
       link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     <FlexWrap>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <MainContent>{children}</MainContent>
       <Footer />
     </FlexWrap>

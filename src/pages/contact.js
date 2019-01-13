@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Layout from '../components/layout'
 
 import { colors } from '../utilities'
 import {
@@ -29,12 +30,11 @@ const Contact = () => (
 export default Contact
 
 // STYLES
-
-const ContactHeading = SectionHeading.extend`
+const ContactHeading = styled(SectionHeading)`
   max-width: 15rem;
 `
 
-const ContactText = Text.extend`
+const ContactText = styled(Text)`
   text-align: center;
 `
 const EmailLink = styled.a`

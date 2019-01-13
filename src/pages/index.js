@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+import Layout from '../components/layout'
 
 import { colors } from '../utilities'
 import { MainWrapper, ContentColumn } from '../styles/pages'

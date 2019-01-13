@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from '@emotion/styled'
 
 import { colors } from '../utilities'
@@ -56,6 +55,6 @@ const SocialIcon = styled.img`
   }
 `
 
-const SocialIconLast = SocialIcon.extend`
+const SocialIconLast = styled(SocialIcon)`
   margin-right: 0;
 `

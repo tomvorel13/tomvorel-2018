@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Layout from '../components/layout'
 
 import { colors } from '../utilities'
 import {
@@ -49,7 +50,7 @@ const Projects = () => (
 export default Projects
 
 // STYLES
-const ProjectsHeading = SectionHeading.extend`
+const ProjectsHeading = styled(SectionHeading)`
   max-width: 15rem;
 `
 
@@ -61,6 +62,6 @@ const SecondaryHeading = styled.a`
   text-decoration: none;
 `
 
-const TextWithMb = Text.extend`
+const TextWithMb = styled(Text)`
   margin-bottom: 6rem;
 `
