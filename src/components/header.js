@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import Modal from '../components/modal'
 
@@ -17,7 +17,6 @@ class Header extends Component {
     this.setState({
       showMenu: !this.state.showMenu,
     })
-    console.log('Hi!')
   }
 
   render() {

@@ -7,10 +7,10 @@ import Footer from '../components/footer'
 
 import favicon from '../assets/favicon.png'
 import './index.css'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { colors } from '../utilities'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, history, location, match }) => (
   <LayoutWrapper>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -29,7 +29,7 @@ const Layout = ({ children, data }) => (
     />
     <FlexWrap>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <MainContent>{children()}</MainContent>
+      <MainContent>{children}</MainContent>
       <Footer />
     </FlexWrap>
   </LayoutWrapper>

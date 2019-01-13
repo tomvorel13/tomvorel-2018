@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { colors } from '../utilities'
 import {
@@ -10,17 +10,20 @@ import {
 } from '../styles/pages'
 
 const Contact = () => (
-  <MainWrapper>
-    <ContentColumn>
-      <ContactHeading>Contact</ContactHeading>
-      <ContactText>
-        Feel free to get in touch with me via email{' '}
-        <EmailLink href="mailto:tomvorel13@gmail.com">
-          tomvorel13@gmail.com
-        </EmailLink> or reach out via one of the below listed social platforms.
-      </ContactText>
-    </ContentColumn>
-  </MainWrapper>
+  <Layout>
+    <MainWrapper>
+      <ContentColumn>
+        <ContactHeading>Contact</ContactHeading>
+        <ContactText>
+          Feel free to get in touch with me via email{' '}
+          <EmailLink href="mailto:tomvorel13@gmail.com">
+            tomvorel13@gmail.com
+          </EmailLink>{' '}
+          or reach out via one of the below listed social platforms.
+        </ContactText>
+      </ContentColumn>
+    </MainWrapper>
+  </Layout>
 )
 
 export default Contact
@@ -37,5 +40,5 @@ const ContactText = Text.extend`
 const EmailLink = styled.a`
   color: ${colors.black};
   text-decoration: none;
-  font-weight: 600; 
+  font-weight: 600;
 `

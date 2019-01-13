@@ -1,26 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { colors } from '../utilities'
 import { MainWrapper, ContentColumn } from '../styles/pages'
 import DoubleArrow from '../assets/double_arrow.svg'
 
 const IndexPage = () => (
-  <MainWrapper>
-    <ContentColumn>
-      <HeroText>CREATE</HeroText>
-      <IntroSentence>
-        Hi, my name is Tom and I am a Frontend <br /> Developer from Brno, Czech
-        Republic.
-      </IntroSentence>
-      <StyledLink to="/about">
-        <Button>
-          About Me <Caret src={DoubleArrow} />
-        </Button>
-      </StyledLink>
-    </ContentColumn>
-  </MainWrapper>
+  <Layout>
+    <MainWrapper>
+      <ContentColumn>
+        <HeroText>CREATE</HeroText>
+        <IntroSentence>
+          Hi, my name is Tom and I am a Frontend <br /> Developer from Brno,
+          Czech Republic.
+        </IntroSentence>
+        <StyledLink to="/about">
+          <Button>
+            About Me <Caret src={DoubleArrow} />
+          </Button>
+        </StyledLink>
+      </ContentColumn>
+    </MainWrapper>
+  </Layout>
 )
 
 export default IndexPage
@@ -88,7 +90,7 @@ const Button = styled.button`
   text-transform: uppercase;
   width: 20rem;
 
-  //Animation
+  /* Animation */
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);

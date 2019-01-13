@@ -1,10 +1,10 @@
 import React from 'react'
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <h1>Oops!</h1>
     <p>No such page found.</p>
-  </div>
+  </Layout>
 )
 
 export default NotFoundPage
