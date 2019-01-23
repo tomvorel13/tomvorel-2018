@@ -1,23 +1,23 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "@emotion/styled"
 
-import { colors } from '../utilities'
-import Cross from '../assets/cross.svg'
+import { colors } from "../utilities"
+import Cross from "../assets/cross.svg"
 
-const Modal = ({ siteTitle, ...props }) => (
+const Modal = ({ clicked }) => (
   <ModalWrapper>
-    <CrossIcon src={Cross} onClick={props.clicked} />
-    <MenuLink onClick={props.clicked} to="/">
+    <CrossIcon src={Cross} onClick={clicked} />
+    <MenuLink onClick={clicked} to="/">
       HOME
     </MenuLink>
-    <MenuLink onClick={props.clicked} to="/about">
+    <MenuLink onClick={clicked} to="/about">
       ABOUT
     </MenuLink>
-    <MenuLink onClick={props.clicked} to="/projects">
+    <MenuLink onClick={clicked} to="/projects">
       PROJECTS
     </MenuLink>
-    <MenuLink onClick={props.clicked} to="/contact">
+    <MenuLink onClick={clicked} to="/contact">
       CONTACT
     </MenuLink>
   </ModalWrapper>
@@ -49,7 +49,7 @@ const MenuLink = styled(Link)`
   color: ${colors.black};
   background-color: ${colors.yellow};
   display: block;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 3rem;
   padding: 2rem 0;
   margin-bottom: 0.3rem;

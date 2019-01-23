@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import React, { Component } from "react"
+import { Link } from "gatsby"
+import styled from "@emotion/styled"
 
-import Modal from '../components/modal'
+import Modal from "./modal"
 
-import { colors } from '../utilities'
-import Logo1 from '../assets/Logo1.svg'
-import Burger from '../assets/burger.svg'
+import { colors } from "../utilities"
+import Logo1 from "../assets/Logo1.svg"
+import Burger from "../assets/burger.svg"
 
 class Header extends Component {
   state = {
@@ -14,15 +14,16 @@ class Header extends Component {
   }
 
   toggleModal = () => {
-    this.setState({
-      showMenu: !this.state.showMenu,
-    })
+    this.setState(previousState => ({
+      showMenu: !previousState.showMenu,
+    }))
   }
 
   render() {
+    const { showMenu } = this.state
     return (
       <div>
-        {this.state.showMenu ? <Modal clicked={this.toggleModal} /> : null}
+        {showMenu ? <Modal clicked={this.toggleModal} /> : null}
         <Navbar>
           <Link to="/">
             <Logo src={Logo1} alt="" />
@@ -99,7 +100,7 @@ const MenuItem = styled(Link)`
   border-bottom: 0.3rem solid transparent;
   display: inline-block;
   color: ${colors.black};
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 2rem;
   margin-left: 4rem;
