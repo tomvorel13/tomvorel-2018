@@ -3,9 +3,9 @@ import styled from "@emotion/styled"
 
 import { colors } from "../utilities"
 import Github from "../assets/Github.svg"
-import Google from "../assets/Google.svg"
 import Linkedin from "../assets/LinkedIN.svg"
 import Twitter from "../assets/Twitter.svg"
+import Mail from "../assets/mail.svg"
 
 const Footer = () => (
   <FooterWrap>
@@ -25,7 +25,7 @@ const Footer = () => (
         <SocialIcon src={Github} />
       </a>
       <a href="mailto:tomvorel13@gmail.com">
-        <SocialIcon src={Google} />
+        <SocialIcon src={Mail} />
       </a>
       <a
         href="https://www.linkedin.com/in/tomvorel"
