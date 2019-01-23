@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React from "react"
+import styled from "@emotion/styled"
 
-import { colors } from '../utilities'
-import Github from '../assets/Github.svg'
-import Google from '../assets/Google.svg'
-import Linkedin from '../assets/LinkedIN.svg'
-import Twitter from '../assets/Twitter.svg'
+import { colors } from "../utilities"
+import Github from "../assets/Github.svg"
+import Google from "../assets/Google.svg"
+import Linkedin from "../assets/LinkedIN.svg"
+import Twitter from "../assets/Twitter.svg"
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
   <FooterWrap>
     <IconsWrapper>
       <a

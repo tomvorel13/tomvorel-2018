@@ -1,31 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { graphql } from "gatsby"
+import styled from "@emotion/styled"
 
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from "./header"
+import Footer from "./footer"
 
-import favicon from '../assets/favicon.png'
-import '../layouts/index.css'
-import styled from '@emotion/styled'
-import { colors } from '../utilities'
+import favicon from "../assets/favicon.png"
+import "./index.css"
+import { colors } from "../utilities"
 
-const Layout = ({ children, data, history, location, match }) => (
+const Layout = ({ children }) => (
   <LayoutWrapper>
     <Helmet
       meta={[
         {
-          name: 'description',
-          content: 'A new version of my personal website for 2018',
+          name: "description",
+          content: "A new version of my personal website for 2018",
         },
         {
-          name: 'keywords',
+          name: "keywords",
           content:
-            'tom vorel, web developer, portfolio, 2018, personal website',
+            "tom vorel, web developer, portfolio, 2018, personal website",
         },
       ]}
-      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+      link={[{ rel: "shortcut icon", type: "image/png", href: `${favicon}` }]}
     />
     <FlexWrap>
       <Header />
@@ -65,5 +65,5 @@ const LayoutWrapper = styled.div`
 const MainContent = styled.div`
   flex: 1;
   background-color: ${colors.yellow};
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 `
